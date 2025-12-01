@@ -9,19 +9,19 @@ for rotation in sequence:
     rotate_amount = int(rotation[1:])
     
     if rotation.startswith('R'):
-       dial += rotate_amount
-       while dial >= 100:
-           dial -= 100
-           zero_counter += 1
+       for digit in range(0, rotate_amount):
+           dial += 1
+           if dial == 100:
+               dial = 0
+               zero_counter += 1
            
     
     if rotation.startswith('L'):
-        dial -= rotate_amount
-        while dial < 0:
-           dial += 100
-           zero_counter += 1
-
-    #if dial == 0:
-        #zero_counter += 1
+        for digit in range(0, rotate_amount):
+           dial -= 1
+           if dial == 0:
+               zero_counter += 1
+           elif dial == -1:
+               dial = 99
 
 print (zero_counter)
