@@ -7,6 +7,14 @@ class DigitTracker:
         digit = str(digit)
         if digit in self.counter:
             self.counter[digit] += 1
+
+    def delete_empties(self):
+        deletion_list = []
+        for digit in self.counter:
+            if self.counter[digit] == 0:
+                deletion_list.append(digit)
+        for num in deletion_list:
+            self.counter.pop(num)
     
     def check_repeats(self):
         for digit in self.counter:
@@ -24,3 +32,5 @@ test.count_digit(7)
 
 print(test.counter)
 test.check_repeats()
+test.delete_empties()
+print(test.counter)
