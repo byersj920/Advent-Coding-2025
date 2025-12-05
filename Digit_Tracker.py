@@ -17,11 +17,15 @@ class DigitTracker:
             self.counter.pop(num)
     
     def check_repeats(self):
+        check_list = []
         for digit in self.counter:
-            if self.counter[digit]:
-                print (self.counter[digit])
-
-
+            check_list.append(self.counter[digit])
+        
+        for num in check_list:
+            if num != check_list[0]:
+                return False
+        
+        return True
 
 
 test = DigitTracker()
@@ -31,6 +35,6 @@ test.count_digit("5")
 test.count_digit(7)
 
 print(test.counter)
-test.check_repeats()
 test.delete_empties()
 print(test.counter)
+print(test.check_repeats())
