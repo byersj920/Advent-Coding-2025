@@ -1,7 +1,9 @@
 from ID_Collection import *
 import math
+from Digit_Tracker import *
 
 invalid_IDs = []
+
 
 for product in products:
     for ID in range (product["min"], product["max"]+1):
