@@ -1,4 +1,5 @@
 from Batteries import *
+import itertools
 
 total_voltage = 0
 voltage_list = []
@@ -26,6 +27,6 @@ for pack in battery_packs:
     
     total_voltage += max_voltage
 
-
+ 
 print(total_voltage)
     
