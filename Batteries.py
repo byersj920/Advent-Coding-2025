@@ -1,4 +1,7 @@
-battery_packs = """987654321111111"""
+battery_packs = """987654321111111
+811111111111119
+234234234234278
+818181911112111"""
 
 battery_packs = battery_packs.split('\n')
 
