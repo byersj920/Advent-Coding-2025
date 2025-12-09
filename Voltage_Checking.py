@@ -15,7 +15,7 @@ for pack in battery_packs:
     
     
 
-    for r in range (starting_point, stopping_point):
+    
 
         
 
