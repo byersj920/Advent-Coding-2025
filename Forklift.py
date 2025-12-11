@@ -19,12 +19,7 @@ for shelf in shelves:
         below_shelf = ""
 
 
-    print(above_shelf)
-    print(shelf)
-    print(below_shelf)
-    valid_papers = check_for_paper(above_shelf,shelf,below_shelf)
-    print(valid_papers)
-    accessible_papers += valid_papers
+    accessible_papers += check_for_paper(above_shelf,shelf,below_shelf)
 
     row += 1
 
