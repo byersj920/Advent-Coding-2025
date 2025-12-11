@@ -12,7 +12,7 @@ def check_for_paper(above_shelf: str = "", shelf: str = "", below_shelf: str = "
 
         #top left
         try:
-            if above_shelf[spot-1] == '@':
+            if above_shelf[spot-1] == '@' and spot != 0:
                 adjacent_papers += 1
         except Exception:
             pass
@@ -33,7 +33,7 @@ def check_for_paper(above_shelf: str = "", shelf: str = "", below_shelf: str = "
 
         #Left
         try:
-            if shelf[spot-1] == '@':
+            if shelf[spot-1] == '@' and spot != 0:
                 adjacent_papers += 1
         except Exception:
             pass
@@ -47,7 +47,7 @@ def check_for_paper(above_shelf: str = "", shelf: str = "", below_shelf: str = "
 
         #Bottom Left
         try:
-            if below_shelf[spot-1] == '@':
+            if below_shelf[spot-1] == '@' and spot != 0:
                 adjacent_papers += 1
         except Exception:
             pass
