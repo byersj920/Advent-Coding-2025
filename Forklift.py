@@ -2,6 +2,7 @@ from Check_For_Paper import *
 
 
 def forklift(shelves: list):
+
     row = 0
     accessible_papers = 0
 
@@ -24,7 +25,7 @@ def forklift(shelves: list):
         row += 1
 
 
-    print(accessible_papers)
+    return(accessible_papers)
 
 
 
