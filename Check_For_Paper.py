@@ -1,11 +1,14 @@
 def check_for_paper(above_shelf: str = "", shelf: str = "", below_shelf: str = ""):
     
     valid_papers = 0
+    new_shelf = []
+    has_something_changed = False
 
     
     for spot in range(0, len(shelf)):
         
         if shelf[spot] != '@':
+            new_shelf.append(shelf[spot])
             continue
 
         adjacent_papers = 0
@@ -68,7 +71,13 @@ def check_for_paper(above_shelf: str = "", shelf: str = "", below_shelf: str = "
 
         if adjacent_papers < 4:
             valid_papers += 1
+            new_shelf.append('X')
+            has_something_changed = True
+        else:
+            new_shelf.append(shelf[spot])
+
+        
         
         
 
-    return valid_papers
+    return valid_papers, new_shelf, has_something_changed
