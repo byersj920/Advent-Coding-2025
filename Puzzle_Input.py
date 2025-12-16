@@ -1188,9 +1188,9 @@ ingredients_strings = puzzle_input[1].split('\n')
 valid_ranges = []
 ingredients = []
 
-for range in valid_ranges_strings:
+for id_range in valid_ranges_strings:
     new_range = {}
-    splitRange = range.split('-')
+    splitRange = id_range.split('-')
     
     new_range["min"] = int(splitRange[0])
     new_range["max"] = int(splitRange[1])

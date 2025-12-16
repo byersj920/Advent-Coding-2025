@@ -1,13 +1,14 @@
 from Puzzle_Input import *
 
-fresh_count = 0
+valid_IDs = []
 
-for ingredient in ingredients:
+for id_range in valid_ranges:
+    for num in range(id_range['min'], id_range['max']+1):
+        
+        if num in valid_IDs:
+            continue
+        else:
+            valid_IDs.append(num)
 
-    for range in valid_ranges:
-        if ingredient >= range['min'] and ingredient <= range['max']:
-            fresh_count += 1
-            break
+print(len(valid_IDs))
 
-
-print(fresh_count)
