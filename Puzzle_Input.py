@@ -13,8 +13,10 @@ puzzle_input = """3-5
 
 puzzle_input = puzzle_input.split('\n\n')
 
-valid_ranges = puzzle_input[0].split('\n')
-ingredients = puzzle_input[1].split('\n')
+valid_ranges_strings = puzzle_input[0].split('\n')
+ingredients_strings = puzzle_input[1].split('\n')
+
+valid_ranges = {}
 
 
 
