@@ -1,14 +1,27 @@
 from Puzzle_Input import *
 
-valid_IDs = []
+final_pantry = []
+final_pantry.append(valid_ranges[0])
 
 for id_range in valid_ranges:
-    for num in range(id_range['min'], id_range['max']+1):
-        
-        if num in valid_IDs:
-            continue
-        else:
-            valid_IDs.append(num)
+    
+    min_value_inserted = False
+    max_value_inserted = False
 
-print(len(valid_IDs))
+    for shelf in final_pantry:
 
+        if id_range['min'] <= shelf['min'] and id_range['max'] >= shelf['min']:
+            shelf['min'] = id_range['min']
+            min_value_inserted = True
+            print(final_pantry)
+        if id_range['max'] >= shelf['max'] and id_range['min'] <= shelf['max']:
+            shelf['max'] = id_range['max']
+            max_value_inserted = True
+            print(final_pantry)
+
+    if min_value_inserted == False and max_value_inserted == False:
+        final_pantry.append(id_range)
+        print(final_pantry)
+
+
+print(final_pantry)
