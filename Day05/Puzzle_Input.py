@@ -20,3 +20,7 @@ for id_range in valid_ranges_strings:
     valid_ranges.append(new_range)
 
 
+print (valid_ranges)
+
+
+
